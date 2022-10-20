@@ -3,7 +3,7 @@ import pickle
 
 app = Flask(__name__)  # initialising flask app
 
-model = pickle.load(open('rf_model', 'rb')) # load ml model
+loaded_model = pickle.load(open('rf_model', 'rb')) # load ml model
 
 @app.route('/', methods=['GET'])
 def home():
